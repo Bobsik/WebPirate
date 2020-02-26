@@ -1,0 +1,32 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/exit-fullscreen.png</file>
+        <file>res/enter-fullscreen.png</file>
+        <file>res/back.png</file>
+        <file>res/forward.png</file>
+        <file>res/cookies.png</file>
+        <file>res/add.png</file>
+        <file>res/download.png</file>
+        <file>res/noconnection.png</file>
+        <file>res/processcrash.png</file>
+        <file>res/loaderror.png</file>
+        <file>res/experimental.png</file>
+        <file>res/privacy.png</file>
+        <file>res/close.png</file>
+        <file>res/adblock.png</file>
+        <file>res/proxy.png</file>
+        <file>res/quickgrid.png</file>
+        <file>res/loaderror_white.png</file>
+        <file>res/popup.png</file>
+        <file>res/grabber.png</file>
+        <file>res/nightmode.png</file>
+        <file>res/reader.png</file>
+        <file>translations/translations.json</file>
+        <file>res/harbour-webpirate.png</file>
+        <file>res/locked.png</file>
+        <file>res/unlocked.png</file>
+        <file>res/close-all.png</file>
+        <file>res/nightmode-tab-on.png</file>
+        <file>res/add-tabssegment.png</file>
+    </qresource>
+</RCC>
