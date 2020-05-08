@@ -2,6 +2,7 @@ import QtQuick 2.6
 import Sailfish.Silica 1.0
 import "../../models"
 import "../../models/navigationbar"
+import "../../components/tabview"
 import "../../js/UrlHelper.js" as UrlHelper
 import "../../js/settings/Database.js" as Database
 import "../../js/settings/BrowseMenus.js" as BrowseMenus
@@ -19,7 +20,7 @@ Dialog
 
     onAccepted: {
         if(UrlHelper.isUrl(tfhomepage.text) || UrlHelper.isSpecialUrl(tfhomepage.text))
-            settings.homepage = UrlHelper.adjustUrl(tfhomepage.text);
+        settings.homepage = UrlHelper.adjustUrl(tfhomepage.text);
 
         settings.searchengine = cbsearchengines.currentIndex;
         settings.browsemenu = cbbrowsemenu.currentIndex;
@@ -29,6 +30,9 @@ Dialog
         settings.lefthanded = swlefthandedmode.checked;
 
         Database.transaction(function(tx) {
+            Database.transactionSet(tx, "gui", settings.gui);
+            Database.transactionSet(tx, "guifactorportrait", settings.guifactorportrait);
+            Database.transactionSet(tx, "guifactorlandscape", settings.guifactorlandscape);
             Database.transactionSet(tx, "homepage", settings.homepage);
             Database.transactionSet(tx, "searchengine", settings.searchengine);
             Database.transactionSet(tx, "browsemenu", settings.browsemenu);
@@ -55,6 +59,79 @@ Dialog
             {
                 acceptText: qsTr("Save")
             }
+
+            SectionHeader { text: qsTr("Main UI") }
+
+            Column{
+              anchors { left: parent.left; right: parent.right; leftMargin: Theme.paddingLarge;}
+              Row{
+                  width: parent.width
+              TextSwitch
+              {
+                id: swphoneui
+                text: qsTr("Phone UI")
+                width: parent.width /2
+                checked: settings.gui === "phone"
+                onClicked:{settings.gui = "phone";
+                           swtabletui.checked = false;
+                           swtabletuilandscape.checked = false;
+                }
+              }
+              TextSwitch
+              {
+                id: swtabletui
+                text: qsTr("Tablet UI")
+                width: parent.width /2
+                checked: settings.gui === "tablet"
+                onClicked:{settings.gui = "tablet";
+                           swphoneui.checked = false;
+                           swtabletuilandscape.checked = false;
+                }
+              }
+            }
+
+              TextSwitch
+              {
+                id: swtabletuilandscape
+                text: qsTr("Tablet UI Landscape only")
+                width: parent.width
+                checked: settings.gui === "tabletlandscape"
+                onClicked:{settings.gui = "tabletlandscape";
+                           swphoneui.checked = false;
+                           swtabletui.checked = false;
+                }
+              }
+
+              ExpandingSection{
+                anchors { left: parent.left; right: parent.right;}
+                title: qsTr('<font size="1"> Main Browser GUI Size Factor in % (80 - 200)</font>')
+               content.sourceComponent:
+                   Column{
+                    anchors.leftMargin: Theme.paddingLarge;
+                    width: parent.width
+                TextField{
+                  id:tfguifactorlandscape
+                  width: parent.width
+                  labelVisible: enabled
+                  label: qsTr("Landscape")
+                  text: settings.guifactorlandscape * 100
+                  validator: IntValidator {bottom: 80; top: 200}
+                  onAcceptableInputChanged: settings.guifactorlandscape = Math.round(text / 100);
+                }
+                TextField{
+                  id:tfguifactorportrait
+                  width: parent.width
+                  labelVisible: enabled
+                  label: qsTr("Portrait")
+                  text: settings.guifactorportrait * 100
+                  validator: IntValidator {bottom: 80; top: 200}
+                  onAcceptableInputChanged: settings.guifactorportrait = Math.round(text / 100);
+                }
+               }
+              }
+            }
+
+            SectionHeader { text: qsTr("General settings") }
 
             TextField
             {

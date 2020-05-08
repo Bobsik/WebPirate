@@ -53,8 +53,10 @@ Item
         }
 
         function onLongPress(data) {
+            var model
             tabView.dialogs.hideAll();
-            tabView.dialogs.showLinkMenu(data.url, data.title, data.src, 'tabmenumodel');
+            model= data.isImage === true ? 'imagemenumodel' : 'tabmenumodel'
+            tabView.dialogs.showLinkMenu(data.url, data.title, data.src, model);
         }
 
         function onSelectorTouched(data) {

@@ -11,7 +11,9 @@ import "../js/settings/Sessions.js" as Sessions
 Page
 {
     property bool rectvis : true
+
     Rectangle{
+        id: rectanim
         anchors.fill: mainpage
         z: mainpage.z +1
         color: Theme.highlightDimmerColor
@@ -19,7 +21,8 @@ Page
         opacity: 1.0
         SequentialAnimation{
             id: hide
-            PropertyAnimation {property: "opacity"; to: 0.0; duration: 250; easing.type: Easing.Linear }
+            running: mainwindow.finishAnim
+            PropertyAnimation {target: rectanim; property: "opacity"; from: 1.0; to: 0.0; duration: 750; easing.type: Easing.InOutCirc }
             onStopped: {rectvis=false;}
 
         }
@@ -40,7 +43,10 @@ Page
                 running: {
                     mainwindow.busy
                 }
-                onStopped: {hide.start();}
+
+                onStopped: {
+                    firstLoad=false;
+                }
             }
         }
         Label{
@@ -52,8 +58,10 @@ Page
     id: mainpage
     allowedOrientations: defaultAllowedOrientations
     showNavigationIndicator: false
-    property string firstLoad
+    property bool firstLoad: true
     property var externallink : []
+
+    onOrientationChanged: tabview.guiUpdate();
 
     function loadLink()
     {
@@ -74,6 +82,7 @@ Page
         target: settings.webpirateinterface
 
         onUrlRequested: {
+
            for(var i = 0; i < args.length; i++)
               {
                  externallink = [];
@@ -81,10 +90,11 @@ Page
                  console.log("opened link: " + externallink[i]);
               }
 
-           if (firstLoad == "true"){
+           if (firstLoad == true){
                tabview.removeTab(0, true);
-               }
+           }
            loadLink();
+           externallink= [];
            mainwindow.activate();
         }
     }
@@ -104,9 +114,6 @@ Page
             var sessionid = Sessions.startupId();
 
             if(sessionid === -1){
-                if (mainwindow.settings.homepage == "about:newtab"){
-                   firstLoad = "true";
-                }
                 tabview.addTab(mainwindow.settings.homepage);
             }
             else

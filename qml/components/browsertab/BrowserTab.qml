@@ -13,6 +13,9 @@ Item
     property alias viewStack: viewstack
 
     property bool thumbUpdated: true
+    property bool favorite
+  //  property var thumb
+    property bool hidelater
     property bool locked: false
     property BlockedPopupModel popups: BlockedPopupModel { }
     property Settings settings
@@ -112,7 +115,7 @@ Item
     onVisibleChanged: {
         if(!visible)
             return;
-
+        if(hidelater){z = parent.z -1; hidelater=false;}
         tabview.pageState = browsertab.state; /* Notify TabView's page state */
         tabview.pageLoading = webview.loading;
     }

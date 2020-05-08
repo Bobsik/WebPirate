@@ -9,17 +9,22 @@ Item
 {
     property alias dialogs: tabviewdialogs
     property alias navigationBar: navigationbar
+    property alias tabBar: tabbar
     property alias miniMenu: minimenu
 
     property ListModel tabs: ListModel { }
     property ClosedTabsModel closedtabs: ClosedTabsModel { }
     property Component tabComponent: null
+ //   property Component Thumb
     property int currentIndex: -1
     property string pageState
     property bool pageLoading
     property bool favorite
+    property int guiFactorPotrait: settings.guifactorportrait
+    property int guiFactorLandscape: settings.guifactorlandscape
     signal stopLoad()
     signal refresh()
+
     signal favorites()
 
     RemorsePopup { id: tabviewremorse }
@@ -28,6 +33,9 @@ Item
     Component.onCompleted: renderTab()
     onCurrentIndexChanged: renderTab()
 
+    onGuiFactorPotraitChanged: {guiUpdate()}
+    onGuiFactorLandscapeChanged: {guiUpdate()}
+
     onPageStateChanged: {
         mainwindow.settings.screenblank.enabled = (pageState !== "mediaplayer");
 
@@ -35,6 +43,7 @@ Item
             tabstack.showQuickGrid();
             navigationbar.solidify();
             minimenu.evaporate();
+            tabbar.solidify();
         }
         else
            { tabstack.hideQuickGrid();
@@ -45,6 +54,10 @@ Item
             navigationbar.evaporate();
         else if(pageState === "mediagrabber")
             navigationbar.solidify();
+    }
+
+    function guiUpdate() {
+        tabnavbartimer.start();
     }
 
     function renderTab()
@@ -83,8 +96,11 @@ Item
         var tab = tabComponent.createObject(tabstack.stack, { "settings": mainwindow.settings,
                                                               "tabView": tabview,
                                                               "anchors.fill": tabstack.stack,
-                                                              "visible": foreground,
+                                                             // "visible": foreground,
+                                                              "hidelater": !foreground,
+                                                              "visible": true,
                                                               "title": "",
+                                                            //  "thumb": null, //thumb
                                                               "locked": false});
 
         if(url)
@@ -120,6 +136,7 @@ Item
             return;
 
         if(!tabs.count) {
+            tabbar.tabsthumb = false;
             currentIndex = -1;
             addTab(mainwindow.settings.homepage);
         }
@@ -166,6 +183,17 @@ Item
     }
 
 
+    Timer
+    {
+        id: tabnavbartimer
+        interval: 250
+
+        onTriggered: {
+            tabbar.evaporate(); tabbar.solidify();
+            navigationbar.evaporate(); navigationbar.solidify();
+        }
+    }
+
     PopupMessage
     {
         id: popupmessage
@@ -196,12 +224,25 @@ Item
         MiniMenu
         {
             id: minimenu
+            visible: settings.browsemenu == 2 ? (!(settings.gui === "tablet") ? (isPortrait ? 1 : 0) : 0) : 0
             anchors { left: parent.left; bottom: navigationbar.top; right: parent.right;  }
         }
 
         NavigationBar
         {
             id: navigationbar
+            anchors { left: parent.left; bottom: tabbar.visible ? tabbar.top : parent.bottom; right: parent.right }
+        }
+        TabBar
+        {
+            id: tabbar
+            visible: {
+                if(settings.gui === "tablet"){return true;}
+                else if(settings.gui === "tabletlandscape"){
+                    if(isLandscape){return true;}
+                }
+                return false;
+            }
             anchors { left: parent.left; bottom: parent.bottom; right: parent.right }
         }
     }

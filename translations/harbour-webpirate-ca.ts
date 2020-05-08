@@ -214,6 +214,10 @@
         <source>Stop</source>
         <translation>Atura</translation>
     </message>
+    <message>
+        <source>Settings</source>
+        <translation type="unfinished">Configuració</translation>
+    </message>
 </context>
 <context>
     <name>ClosedTabsSegment</name>
@@ -681,10 +685,6 @@
         <translation>Agent d&apos;usuari</translation>
     </message>
     <message>
-        <source>Set as default browser</source>
-        <translation>Estableix com a predeterminat</translation>
-    </message>
-    <message>
         <source>Pressed</source>
         <translation type="unfinished"></translation>
     </message>
@@ -698,6 +698,50 @@
     </message>
     <message>
         <source>Left handed mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Browsing menu</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Browsing Menu appearance on webpage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Integrate to MIME</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Main UI</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Phone UI</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tablet UI</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>General settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tablet UI Landscape only</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Landscape</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Portrait</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;font size=&quot;1&quot;&gt; Main Browser GUI Size Factor in % (80 - 200)&lt;/font&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -745,10 +789,6 @@
 <context>
     <name>LinkMenu</name>
     <message>
-        <source>Open New Tab</source>
-        <translation>Obre una pestanya nova</translation>
-    </message>
-    <message>
         <source>Save Link Destination</source>
         <translation>Desa el contingut de l&apos;enllaç </translation>
     </message>
@@ -776,6 +816,38 @@
         <source>Share</source>
         <translation>Comparteix</translation>
     </message>
+    <message>
+        <source>Tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open in this Tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create New Tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter in New Tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copy Image Link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open Image</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>LoadFailed</name>
@@ -786,6 +858,13 @@
     <message>
         <source>WebView process has crashed, restarting...</source>
         <translation>El procés WebView s&apos;ha aturat, s&apos;està reiniciant...</translation>
+    </message>
+</context>
+<context>
+    <name>MainPage</name>
+    <message>
+        <source>Loading..</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -985,6 +1064,22 @@
         <source>Port</source>
         <translation>Port</translation>
     </message>
+    <message>
+        <source>Use Socks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Socket Secure (SOCKS) is an Internet protocol that exchanges network packets between a client and server through a proxy server.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use Tor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tor is free software for enabling anonymous communication. This will setup the proxy automatically to use tor. Tor service must be running on the system for this to work.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>QueryBar</name>
@@ -1025,6 +1120,17 @@
     <message>
         <source>Done</source>
         <translation>Fet</translation>
+    </message>
+</context>
+<context>
+    <name>QuickGridFavorites</name>
+    <message>
+        <source>Settings</source>
+        <translation type="unfinished">Configuració</translation>
+    </message>
+    <message>
+        <source>New tab</source>
+        <translation type="unfinished">Nova pestanya</translation>
     </message>
 </context>
 <context>
@@ -1283,24 +1389,12 @@
         <translation>Error de càrrega</translation>
     </message>
     <message>
-        <source>Copy link</source>
-        <translation>Copia l&apos;enllaç</translation>
-    </message>
-    <message>
         <source>Link copied to clipboard</source>
         <translation>S&apos;ha copiat l&apos;enllaç al porta-retalls</translation>
     </message>
     <message>
-        <source>Save page</source>
-        <translation>Desa la pàgina</translation>
-    </message>
-    <message>
         <source>Downloading web page</source>
         <translation>S&apos;està descarregant la pàgina web</translation>
-    </message>
-    <message>
-        <source>Duplicate tab</source>
-        <translation>Pestanya duplicada</translation>
     </message>
     <message>
         <source>Grabber</source>
@@ -1310,25 +1404,28 @@
         <source>Media Player</source>
         <translation>Reproductor multimèdia</translation>
     </message>
+</context>
+<context>
+    <name>TabListItemSmall</name>
     <message>
-        <source>Enable Reader Mode</source>
-        <translation type="unfinished"></translation>
+        <source>Quick Grid</source>
+        <translation type="unfinished">Reixeta ràpida</translation>
     </message>
     <message>
-        <source>Disable Reader Mode</source>
-        <translation type="unfinished"></translation>
+        <source>Load error</source>
+        <translation type="unfinished">Error de càrrega</translation>
     </message>
     <message>
-        <source>Close all</source>
-        <translation type="unfinished"></translation>
+        <source>Grabber</source>
+        <translation type="unfinished">Capturado</translation>
+    </message>
+    <message>
+        <source>Media Player</source>
+        <translation type="unfinished">Reproductor multimèdia</translation>
     </message>
 </context>
 <context>
     <name>TabsSegment</name>
-    <message>
-        <source>Tabs</source>
-        <translation>Pestanyes</translation>
-    </message>
     <message>
         <source>Settings</source>
         <translation>Configuració</translation>
@@ -1345,6 +1442,10 @@
         <source>Enable Night Mode</source>
         <translation>Habilita el mode nocturn</translation>
     </message>
+    <message>
+        <source>Close all tabs</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>TabsSettingsPage</name>
@@ -1359,6 +1460,14 @@
     <message>
         <source>Close last tab</source>
         <translation>Tanca l&apos;última pestanya</translation>
+    </message>
+    <message>
+        <source>Enable TabSegment Minimenu</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Switch between Minimenu or Pull Down Menu in Tabs Segment</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -49,7 +49,6 @@ SilicaFlickable
 //        title: qsTr("Tabs")
 //    }
 
-
     SilicaGridView
     {
         id: tabssegment    
@@ -86,7 +85,7 @@ SilicaFlickable
             onLockRequested: {
                 tabView.lockTab(model.index);}
             onClicked: {
-                tabView.currentIndex = index;
+                tabView.currentIndex = model.index;
                 pageStack.pop();
             }
         }

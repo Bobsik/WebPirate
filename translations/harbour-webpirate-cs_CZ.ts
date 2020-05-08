@@ -218,7 +218,7 @@
 <context>
     <name>BrowserTab</name>
     <message>
-        <location filename="../qml/components/browsertab/BrowserTab.qml" line="26"/>
+        <location filename="../qml/components/browsertab/BrowserTab.qml" line="29"/>
         <source>New Tab</source>
         <translation>Nový panel</translation>
     </message>
@@ -226,48 +226,48 @@
 <context>
     <name>BrowserWebView</name>
     <message>
-        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="122"/>
-        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="200"/>
+        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="123"/>
+        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="201"/>
         <source>Settings</source>
         <translation>Nastavení</translation>
     </message>
     <message>
-        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="127"/>
-        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="183"/>
+        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="128"/>
+        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="184"/>
         <source>Remove from Favorites</source>
         <translation>Odstranit ze záložek</translation>
     </message>
     <message>
-        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="127"/>
-        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="183"/>
+        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="128"/>
+        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="184"/>
         <source>Add to Favorites</source>
         <translation>Přidat do záložek</translation>
     </message>
     <message>
-        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="144"/>
-        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="177"/>
+        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="145"/>
+        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="178"/>
         <source>Stop</source>
         <translation>Stop</translation>
     </message>
     <message>
-        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="144"/>
-        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="177"/>
+        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="145"/>
+        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="178"/>
         <source>Refresh</source>
         <translation>Obnovit</translation>
     </message>
     <message>
-        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="150"/>
-        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="171"/>
+        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="151"/>
+        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="172"/>
         <source>New tab</source>
         <translation>Nový panel</translation>
     </message>
     <message>
-        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="286"/>
+        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="303"/>
         <source>Accept Certificate from: %1 ?</source>
         <translation>Akceptovat certifikát od %1 ?</translation>
     </message>
     <message>
-        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="365"/>
+        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="382"/>
         <source>Downloading</source>
         <translation>Stahuje se</translation>
     </message>
@@ -813,62 +813,102 @@
 <context>
     <name>GeneralSettingsPage</name>
     <message>
-        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="56"/>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="63"/>
+        <source>Main UI</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="72"/>
+        <source>Phone UI</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="83"/>
+        <source>Tablet UI</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="60"/>
         <source>Save</source>
         <translation>Uložit</translation>
     </message>
     <message>
-        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="62"/>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="96"/>
+        <source>Tablet UI Landscape only</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="107"/>
+        <source>&lt;font size=&quot;1&quot;&gt; Main Browser GUI Size Factor in % (80 - 200)&lt;/font&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="116"/>
+        <source>Landscape</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="125"/>
+        <source>Portrait</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="134"/>
+        <source>General settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="139"/>
         <source>Home Page</source>
         <translation>Domovská stránka</translation>
     </message>
     <message>
-        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="71"/>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="148"/>
         <source>Search Engines</source>
         <translation>Poskytovatelé vyhledávání</translation>
     </message>
     <message>
-        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="72"/>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="149"/>
         <source>Long press to edit</source>
         <translation>Dlouze zmáčkněte pro editaci</translation>
     </message>
     <message>
-        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="97"/>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="174"/>
         <source>Browsing menu</source>
         <translation>Menu při prohlížení</translation>
     </message>
     <message>
-        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="98"/>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="175"/>
         <source>Browsing Menu appearance on webpage</source>
         <translation>Typ menu při přohlížení na webové stránce</translation>
     </message>
     <message>
-        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="117"/>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="194"/>
         <source>User Agent</source>
         <translation>Identifikátor prohlížeče</translation>
     </message>
     <message>
-        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="136"/>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="213"/>
         <source>Left handed mode</source>
         <translation>Levoruký mód</translation>
     </message>
     <message>
-        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="144"/>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="221"/>
         <source>Integrate to MIME</source>
         <translation>Integrovat do MIME</translation>
     </message>
     <message>
-        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="154"/>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="231"/>
         <source>Custom actions</source>
         <translation>Vlastní akce</translation>
     </message>
     <message>
-        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="159"/>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="236"/>
         <source>Pressed</source>
         <translation>Zmáčknutí</translation>
     </message>
     <message>
-        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="177"/>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="254"/>
         <source>Long Pressed</source>
         <translation>Dlouhé zmáčknutí</translation>
     </message>
@@ -1021,7 +1061,7 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="48"/>
+        <location filename="../qml/pages/MainPage.qml" line="54"/>
         <source>Loading..</source>
         <translation>Načítání...</translation>
     </message>
@@ -1267,6 +1307,26 @@
         <source>Port</source>
         <translation>Port</translation>
     </message>
+    <message>
+        <location filename="../qml/pages/settings/ProxySettingsPage.qml" line="84"/>
+        <source>Use Socks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/settings/ProxySettingsPage.qml" line="85"/>
+        <source>Socket Secure (SOCKS) is an Internet protocol that exchanges network packets between a client and server through a proxy server.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/settings/ProxySettingsPage.qml" line="93"/>
+        <source>Use Tor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/settings/ProxySettingsPage.qml" line="94"/>
+        <source>Tor is free software for enabling anonymous communication. This will setup the proxy automatically to use tor. Tor service must be running on the system for this to work.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>QueryBar</name>
@@ -1315,6 +1375,19 @@
         <location filename="../qml/components/quickgrid/QuickGridBottomPanel.qml" line="46"/>
         <source>Done</source>
         <translation>Dokončeno</translation>
+    </message>
+</context>
+<context>
+    <name>QuickGridFavorites</name>
+    <message>
+        <location filename="../qml/components/quickgrid/QuickGridFavorites.qml" line="33"/>
+        <source>Settings</source>
+        <translation type="unfinished">Nastavení</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/quickgrid/QuickGridFavorites.qml" line="39"/>
+        <source>New tab</source>
+        <translation type="unfinished">Nový panel</translation>
     </message>
 </context>
 <context>
@@ -1651,6 +1724,29 @@
     </message>
 </context>
 <context>
+    <name>TabListItemSmall</name>
+    <message>
+        <location filename="../qml/components/items/tab/TabListItemSmall.qml" line="40"/>
+        <source>Quick Grid</source>
+        <translation type="unfinished"> Rychlá volba</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/items/tab/TabListItemSmall.qml" line="43"/>
+        <source>Load error</source>
+        <translation type="unfinished">Chyba načtení</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/items/tab/TabListItemSmall.qml" line="46"/>
+        <source>Grabber</source>
+        <translation type="unfinished">Grabber</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/items/tab/TabListItemSmall.qml" line="49"/>
+        <source>Media Player</source>
+        <translation type="unfinished">Přehrávač médií</translation>
+    </message>
+</context>
+<context>
     <name>TabsSegment</name>
     <message>
         <location filename="../qml/components/segments/TabsSegment.qml" line="22"/>
@@ -1777,20 +1873,20 @@
 <context>
     <name>WebViewListener</name>
     <message>
-        <location filename="../qml/components/browsertab/webview/WebViewListener.qml" line="142"/>
-        <location filename="../qml/components/browsertab/webview/WebViewListener.qml" line="156"/>
+        <location filename="../qml/components/browsertab/webview/WebViewListener.qml" line="144"/>
+        <location filename="../qml/components/browsertab/webview/WebViewListener.qml" line="158"/>
         <source>No videos found, report to developer</source>
         <translation>Žádná videa nenalezena, nahlašte vývojáři</translation>
     </message>
     <message>
-        <location filename="../qml/components/browsertab/webview/WebViewListener.qml" line="142"/>
-        <location filename="../qml/components/browsertab/webview/WebViewListener.qml" line="156"/>
+        <location filename="../qml/components/browsertab/webview/WebViewListener.qml" line="144"/>
+        <location filename="../qml/components/browsertab/webview/WebViewListener.qml" line="158"/>
         <source>Video grabbed successfully</source>
         <translation>Video úspěšně staženo</translation>
     </message>
     <message>
-        <location filename="../qml/components/browsertab/webview/WebViewListener.qml" line="150"/>
-        <location filename="../qml/components/browsertab/webview/WebViewListener.qml" line="164"/>
+        <location filename="../qml/components/browsertab/webview/WebViewListener.qml" line="152"/>
+        <location filename="../qml/components/browsertab/webview/WebViewListener.qml" line="166"/>
         <source>Codec</source>
         <translation>Kodek</translation>
     </message>

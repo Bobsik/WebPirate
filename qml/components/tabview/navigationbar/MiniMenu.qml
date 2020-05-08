@@ -177,7 +177,6 @@ Rectangle{
             fillMode: Image.PreserveAspectFit
         }
         MouseArea { anchors.fill: parent; onClicked: {
-          //     var tab = tabs.get(currentIndex).tab;
                 getTab();
                 if(tab.webView.loading){
                     stopLoad();}
@@ -185,8 +184,6 @@ Rectangle{
                     refresh();}
                 target='stoprefresh';
                 gradseq.start();
-              //  isloading();
-              //forceLayout();
            }
         }
 }
@@ -215,7 +212,7 @@ Rectangle
             id: imgfavorite
             height: parent.height * 0.75
             width: parent.width * 0.75
-            source:  tabview.favorite ? "image://theme/icon-m-favorite-selected" : "image://theme/icon-m-favorite"
+            source:  tabview.currentTab().favorite ? "image://theme/icon-m-favorite-selected" : "image://theme/icon-m-favorite"
             anchors { margins: Theme.itemSizeSmall; horizontalCenter: parent.horizontalCenter; verticalCenter: parent.verticalCenter  }
             fillMode: Image.PreserveAspectFit
         }

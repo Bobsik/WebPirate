@@ -57,7 +57,7 @@ TextField
     }
 
     id: querybar
-    font.pixelSize: Theme.fontSizeSmall
+    font.pixelSize: Math.round(Theme.fontSizeSmall  * (isPortrait ? settings.guifactorportrait : settings.guifactorlandscape))
     focusOutBehavior: FocusBehavior.ClearItemFocus
     textLeftMargin: Theme.paddingMedium
     textRightMargin: Theme.paddingMedium

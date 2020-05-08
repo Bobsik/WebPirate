@@ -35,6 +35,9 @@ QtObject
     property int longpresscustomaction   /* Custom action on Long Press */
     property string homepage             /* HomePage Url */
     property string browsemenu           /* Browse Menu */
+    property string gui                  /* GUI Type */
+    property double guifactorportrait    /* GUI Portrait factor size*/
+    property double guifactorlandscape   /* GUI Landscape factor size*/
     property bool lefthanded             /* Left Handed Mode */
     property bool clearonexit            /* Wipe UserData on exit */
     property bool keepfavicons           /* Keep Icon Database on data deletion */

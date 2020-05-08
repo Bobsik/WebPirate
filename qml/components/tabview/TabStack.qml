@@ -6,30 +6,60 @@ import "../quickgrid"
 Item
 {
     property alias stack: tabstackitems
+    property bool quickvisible: false
     property bool dialogsVisible
 
     signal hideAll()
 
     function hideQuickGrid() {
-        quickgrid.visible = false;
+        quickvisible = false;
     }
 
     function showQuickGrid() {
-        quickgrid.disableEditMode();
-        quickgrid.visible = true;
+        if(gridloader.sourceComponent == grid_quickgrid){gridloader.item.disableEditMode();}
+        quickvisible = true;
     }
 
     id: tabstack
 
-    QuickGrid
-    {
+    Loader{
+        id: gridloader
+        anchors.fill: parent
+        sourceComponent:grid_favorites// grid_quickgrid
+        visible: quickvisible
+        onItemChanged: {
+            if(!gridloader.item)
+                return;
+
+            gridloader.item.load();
+        }
+
+    }
+
+    Component{
+      id: grid_quickgrid
+      QuickGrid
+      {
         id: quickgrid
         anchors.fill: parent
-        visible: false
 
         onNewTabRequested: tabview.addTab(mainwindow.settings.homepage)
         onLoadRequested:   tabview.currentTab().load(request)
 
+      }
+    }
+
+    Component{
+      id: grid_favorites
+      QuickGridFavorites
+      {
+        id: favorites
+        anchors.fill: parent
+
+        onNewTabRequested: tabview.addTab(mainwindow.settings.homepage)
+        onLoadRequested:   tabview.currentTab().load(request)
+
+      }
     }
 
     Item

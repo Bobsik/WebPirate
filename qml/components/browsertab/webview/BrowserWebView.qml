@@ -114,6 +114,7 @@ SilicaWebView
                 return;
 
             tabView.navigationBar.solidify();
+            tabView.tabBar.solidify();
             tabView.miniMenu.solidify();
         }
 
@@ -233,6 +234,22 @@ SilicaWebView
     interactive: !selector.moving
     overridePageStackNavigation: true
     onVisibleChanged: calculateMetrics(false, false)
+
+ //   ShaderEffectSource
+ //   {
+ //       id: thumb
+      //  anchors{left: parent.left; right: parent.right; bottom: parent.bottom}
+ //       height:480
+ //       width: 640
+ //       live: false
+ //       sourceItem: parent
+        //sourceRect: Qt.rect(0, 0, parent.width, parent.height)
+ //       sourceRect:{
+ //           var wvposy = Math.round(webview.visibleArea.yPosition * webview.height)
+ //           var wvposx = Math.round(webview.visibleArea.xPosition * webview.width)
+ //           return Qt.rect(wvposx, 200, 640, 480);}
+ //       visible: false//true
+ //   }
 
     /* Experimental WebView Features */
     experimental.preferences.webGLEnabled: true
@@ -379,15 +396,25 @@ SilicaWebView
         browsertab.state = "webview";
     }
 
+  //  onFlickEnded: {
+  //      var wvposy = Math.round(webview.visibleArea.yPosition * webview.height)
+  //      var wvposx = Math.round(webview.visibleArea.xPosition * webview.width)
+
+  //      console.log("X:" + wvposx + "Y:" + wvposy);
+  //      thumb.scheduleUpdate();
+  //      browsertab.thumb = thumb;
+  //      browsertab.thumbUpdated = true;}
     onFlickStarted: {
             if(verticalVelocity < 0){
                 tabView.navigationBar.solidify();
+                tabView.tabBar.solidify();
                 tabView.miniMenu.solidify();
                 return;
             }
             else if(verticalVelocity > 0){
                 tabView.navigationBar.evaporate();
-                tabView.miniMenu.evaporate()
+                tabView.tabBar.evaporate();
+                tabView.miniMenu.evaporate();
             }
          }
 
@@ -426,6 +453,7 @@ SilicaWebView
                 tabView.dialogs.hideAll();
                 tabView.navigationBar.solidify();
                 tabView.miniMenu.solidify();
+                tabView.tabBar.solidify();
                 Qt.inputMethod.hide();
             }
             if(!UrlHelper.isSpecialUrl(stringurl) && UrlHelper.isUrl(stringurl)) {
@@ -449,9 +477,9 @@ SilicaWebView
 
         if(loadRequest.status === WebView.LoadSucceededStatus) {
             tabView.pageLoading = false;
-            var stringurl = url.toString();
-     //       webview.favorite = Favorites.contains(stringurl);
-            tabView.favorite = Favorites.contains(stringurl);
+            stringurl = url.toString();
+            browsertab.favorite = Favorites.contains(stringurl);
+     //       tabView.favorite = Favorites.contains(stringurl);
 
             if(!UrlHelper.isSpecialUrl(stringurl) && UrlHelper.isUrl(stringurl)) {
 
@@ -471,10 +499,7 @@ SilicaWebView
                 Credentials.compile(Database.instance(), stringurl, webview);
                 History.store(stringurl, title);
 
-                if(mainpage.firstLoad=="afterfirst"){mainpage.firstLoad="false"}
-                if(mainpage.firstLoad=="true"){mainpage.firstLoad="afterfirst"}
-
-                tabView.currentIndex=currentIndex;
+              //  tabView.currentIndex=currentIndex;
                 if(mainwindow.busy){
                    mainwindow.busy=false;
                  }
@@ -489,7 +514,10 @@ SilicaWebView
               }
               firstrunquickgrid=true;
             }
+         //   thumb.scheduleUpdate();
+         //   browsertab.thumb = thumb;
             browsertab.thumbUpdated = true;
+            if(browsertab.hidelater){browsertab.visible = false}
         }
     }
 }

@@ -184,7 +184,7 @@ ListItem
                     switchContent();}
     }
 
-    Connections { target: tab; onThumbUpdatedChanged: update() }
+    Connections { target: tab; onThumbUpdatedChanged: {update();} }
 
     Item
     {

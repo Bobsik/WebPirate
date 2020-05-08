@@ -265,7 +265,11 @@ HEADERS += \
 DISTFILES += \
     harbour-webpirate.desktop \
     org.harbour.webpirate.service \
+    qml/components/items/FavoriteItemQuick.qml \
+    qml/components/items/tab/TabListItemSmall.qml \
     qml/components/items/tab/TabSegmentMiniMenu.qml \
+    qml/components/quickgrid/QuickGridFavorites.qml \
+    qml/components/tabview/navigationbar/TabBar.qml \
     qml/js/settings/BrowseMenus.js \
     qml/js/settings/TabViewMinimenu.js \
     rpm/harbour-webpirate.changes \

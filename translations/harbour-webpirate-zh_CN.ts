@@ -218,7 +218,7 @@
 <context>
     <name>BrowserTab</name>
     <message>
-        <location filename="../qml/components/browsertab/BrowserTab.qml" line="26"/>
+        <location filename="../qml/components/browsertab/BrowserTab.qml" line="29"/>
         <source>New Tab</source>
         <translation>新标签</translation>
     </message>
@@ -226,48 +226,48 @@
 <context>
     <name>BrowserWebView</name>
     <message>
-        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="122"/>
-        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="200"/>
+        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="123"/>
+        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="201"/>
         <source>Settings</source>
         <translation>设置</translation>
     </message>
     <message>
-        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="127"/>
-        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="183"/>
+        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="128"/>
+        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="184"/>
         <source>Remove from Favorites</source>
         <translation>从收藏移除</translation>
     </message>
     <message>
-        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="127"/>
-        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="183"/>
+        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="128"/>
+        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="184"/>
         <source>Add to Favorites</source>
         <translation>添加到收藏</translation>
     </message>
     <message>
-        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="144"/>
-        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="177"/>
+        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="145"/>
+        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="178"/>
         <source>Stop</source>
         <translation>停止</translation>
     </message>
     <message>
-        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="144"/>
-        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="177"/>
+        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="145"/>
+        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="178"/>
         <source>Refresh</source>
         <translation>刷新</translation>
     </message>
     <message>
-        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="150"/>
-        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="171"/>
+        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="151"/>
+        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="172"/>
         <source>New tab</source>
         <translation>新标签</translation>
     </message>
     <message>
-        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="286"/>
+        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="303"/>
         <source>Accept Certificate from: %1 ?</source>
         <translation>是否接受证书来自:%1 ?</translation>
     </message>
     <message>
-        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="365"/>
+        <location filename="../qml/components/browsertab/webview/BrowserWebView.qml" line="382"/>
         <source>Downloading</source>
         <translation>正在下载</translation>
     </message>
@@ -813,62 +813,102 @@
 <context>
     <name>GeneralSettingsPage</name>
     <message>
-        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="56"/>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="63"/>
+        <source>Main UI</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="72"/>
+        <source>Phone UI</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="83"/>
+        <source>Tablet UI</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="60"/>
         <source>Save</source>
         <translation>保存</translation>
     </message>
     <message>
-        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="62"/>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="96"/>
+        <source>Tablet UI Landscape only</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="107"/>
+        <source>&lt;font size=&quot;1&quot;&gt; Main Browser GUI Size Factor in % (80 - 200)&lt;/font&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="116"/>
+        <source>Landscape</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="125"/>
+        <source>Portrait</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="134"/>
+        <source>General settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="139"/>
         <source>Home Page</source>
         <translation>主页</translation>
     </message>
     <message>
-        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="71"/>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="148"/>
         <source>Search Engines</source>
         <translation>搜索引擎</translation>
     </message>
     <message>
-        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="72"/>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="149"/>
         <source>Long press to edit</source>
         <translation>长按以编辑</translation>
     </message>
     <message>
-        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="97"/>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="174"/>
         <source>Browsing menu</source>
         <translation>浏览菜单</translation>
     </message>
     <message>
-        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="98"/>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="175"/>
         <source>Browsing Menu appearance on webpage</source>
         <translation>浏览菜单出现于网页</translation>
     </message>
     <message>
-        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="117"/>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="194"/>
         <source>User Agent</source>
         <translation>用户代理</translation>
     </message>
     <message>
-        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="136"/>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="213"/>
         <source>Left handed mode</source>
         <translation>左手模式</translation>
     </message>
     <message>
-        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="144"/>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="221"/>
         <source>Integrate to MIME</source>
         <translation>整合到MME</translation>
     </message>
     <message>
-        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="155"/>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="231"/>
         <source>Custom actions</source>
         <translation>自定义操作</translation>
     </message>
     <message>
-        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="160"/>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="236"/>
         <source>Pressed</source>
         <translation>按下</translation>
     </message>
     <message>
-        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="178"/>
+        <location filename="../qml/pages/settings/GeneralSettingsPage.qml" line="254"/>
         <source>Long Pressed</source>
         <translation>长按</translation>
     </message>
@@ -945,7 +985,7 @@
     <message>
         <location filename="../qml/menus/LinkMenu.qml" line="101"/>
         <source>Open in this Tab</source>
-        <translation>在该标签打开></translation>
+        <translation>在该标签打开&gt;</translation>
     </message>
     <message>
         <location filename="../qml/menus/LinkMenu.qml" line="106"/>
@@ -1016,6 +1056,14 @@
         <location filename="../qml/components/browsertab/views/LoadFailed.qml" line="46"/>
         <source>You are in offline mode</source>
         <translation>你正处于离线模式</translation>
+    </message>
+</context>
+<context>
+    <name>MainPage</name>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="54"/>
+        <source>Loading..</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1259,6 +1307,26 @@
         <source>Port</source>
         <translation>端口</translation>
     </message>
+    <message>
+        <location filename="../qml/pages/settings/ProxySettingsPage.qml" line="84"/>
+        <source>Use Socks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/settings/ProxySettingsPage.qml" line="85"/>
+        <source>Socket Secure (SOCKS) is an Internet protocol that exchanges network packets between a client and server through a proxy server.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/settings/ProxySettingsPage.qml" line="93"/>
+        <source>Use Tor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/settings/ProxySettingsPage.qml" line="94"/>
+        <source>Tor is free software for enabling anonymous communication. This will setup the proxy automatically to use tor. Tor service must be running on the system for this to work.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>QueryBar</name>
@@ -1307,6 +1375,19 @@
         <location filename="../qml/components/quickgrid/QuickGridBottomPanel.qml" line="46"/>
         <source>Done</source>
         <translation>已完成</translation>
+    </message>
+</context>
+<context>
+    <name>QuickGridFavorites</name>
+    <message>
+        <location filename="../qml/components/quickgrid/QuickGridFavorites.qml" line="33"/>
+        <source>Settings</source>
+        <translation type="unfinished">设置</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/quickgrid/QuickGridFavorites.qml" line="39"/>
+        <source>New tab</source>
+        <translation type="unfinished">新标签</translation>
     </message>
 </context>
 <context>
@@ -1632,14 +1713,37 @@
         <translation>视频播放器</translation>
     </message>
     <message>
-        <location filename="../qml/components/items/tab/TabListItem.qml" line="388"/>
+        <location filename="../qml/components/items/tab/TabListItem.qml" line="387"/>
         <source>Link copied to clipboard</source>
         <translation>链接已复制到剪切板</translation>
     </message>
     <message>
-        <location filename="../qml/components/items/tab/TabListItem.qml" line="448"/>
+        <location filename="../qml/components/items/tab/TabListItem.qml" line="447"/>
         <source>Downloading web page</source>
         <translation>正在下载网页</translation>
+    </message>
+</context>
+<context>
+    <name>TabListItemSmall</name>
+    <message>
+        <location filename="../qml/components/items/tab/TabListItemSmall.qml" line="40"/>
+        <source>Quick Grid</source>
+        <translation type="unfinished">快速网格</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/items/tab/TabListItemSmall.qml" line="43"/>
+        <source>Load error</source>
+        <translation type="unfinished">加载错误</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/items/tab/TabListItemSmall.qml" line="46"/>
+        <source>Grabber</source>
+        <translation type="unfinished">抓取器</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/items/tab/TabListItemSmall.qml" line="49"/>
+        <source>Media Player</source>
+        <translation type="unfinished">视频播放器</translation>
     </message>
 </context>
 <context>
@@ -1769,20 +1873,20 @@
 <context>
     <name>WebViewListener</name>
     <message>
-        <location filename="../qml/components/browsertab/webview/WebViewListener.qml" line="142"/>
-        <location filename="../qml/components/browsertab/webview/WebViewListener.qml" line="156"/>
+        <location filename="../qml/components/browsertab/webview/WebViewListener.qml" line="144"/>
+        <location filename="../qml/components/browsertab/webview/WebViewListener.qml" line="158"/>
         <source>No videos found, report to developer</source>
         <translation>没有找到视频，发送报告给开发者</translation>
     </message>
     <message>
-        <location filename="../qml/components/browsertab/webview/WebViewListener.qml" line="142"/>
-        <location filename="../qml/components/browsertab/webview/WebViewListener.qml" line="156"/>
+        <location filename="../qml/components/browsertab/webview/WebViewListener.qml" line="144"/>
+        <location filename="../qml/components/browsertab/webview/WebViewListener.qml" line="158"/>
         <source>Video grabbed successfully</source>
         <translation>已成功抓取视频</translation>
     </message>
     <message>
-        <location filename="../qml/components/browsertab/webview/WebViewListener.qml" line="150"/>
-        <location filename="../qml/components/browsertab/webview/WebViewListener.qml" line="164"/>
+        <location filename="../qml/components/browsertab/webview/WebViewListener.qml" line="152"/>
+        <location filename="../qml/components/browsertab/webview/WebViewListener.qml" line="166"/>
         <source>Codec</source>
         <translation>解码器</translation>
     </message>

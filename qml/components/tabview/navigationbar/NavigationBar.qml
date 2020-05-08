@@ -13,7 +13,15 @@ Rectangle
     property bool clipboardMode: false
 
     readonly property bool normalMode: !searchMode && !clipboardMode
-    readonly property real contentHeight: Theme.itemSizeExtraSmall
+    /* readonly */ property real contentHeight: Math.round(Theme.itemSizeExtraSmall * (isPortrait ? settings.guifactorportrait : settings.guifactorlandscape))
+    property var tab: getTab()
+
+    function getTab(){
+        if(typeof(tabs.get(currentIndex)) != 'undefined'){
+            return tabs.get(currentIndex).tab;
+        }
+            return null;
+    }
 
     readonly property WebView webView: {
         var currenttab = tabview.currentTab();
@@ -46,8 +54,28 @@ Rectangle
         height = 0;
     }
 
+    function isloading()
+    {
+        //při přepnutí panelu se změní index a při změně zpět se to srovná
+        if(tab){
+           reloadiconreload.stop();
+           if(tab.webView.loading){return "image://theme/icon-m-cancel";}
+           else if(!tab.webView.loading){return "image://theme/icon-m-reload";}
+          }
+        else{
+            reloadiconreload.start();
+            return "image://theme/icon-m-question";
+        }
+    }
+
     Behavior on height {
         PropertyAnimation { duration: 250; easing.type: Easing.Linear }
+    }
+
+    Timer{
+        id:reloadiconreload
+        interval: 1
+        onTriggered: tab=getTab();
     }
 
     id: navigationbar
@@ -122,7 +150,11 @@ Rectangle
         }
     }
 
-    BackgroundRectangle { anchors.fill: parent }
+    BackgroundRectangle {
+        anchors.fill: parent
+        color1: Qt.darker(Theme.highlightBackgroundColor, 3)
+        color2: Qt.darker(Theme.highlightBackgroundColor, 2)
+    }
 
     LoadingBar
     {
@@ -228,6 +260,12 @@ Rectangle
 
                     if(btnpopups.visible)
                         w -= btnpopups.width;
+
+                    if(btnstoprefresh.visible)
+                        w -= btnstoprefresh.width;
+
+                    if(btnfavorite.visible)
+                        w -= btnfavorite.width;
 
                     if(btncustomaction.visible)
                         w -= btncustomaction.width;
@@ -395,6 +433,41 @@ Rectangle
                 }
             }
 
+            ImageButton
+            {
+                id: btnstoprefresh
+                enabled: { var tab = tabview.currentTab();
+
+                           if(tab.state == "newtab"){return 0;}
+                           else{return 1;}}
+                visible: !btntabs.visible
+                height: parent.height
+                width: visible ? parent.height : 0
+                highlighted: content.selectedItem === niforward
+                source: isloading()
+                onClicked: {
+                                getTab();
+                                if(tab.webView.loading){
+                                    stopLoad();}
+                                else {
+                                    refresh();}
+                           }
+            }
+
+            ImageButton
+            {
+                id: btnfavorite
+                height: parent.height
+                visible: !btntabs.visible
+                width: visible ? parent.height : 0
+                highlighted: content.selectedItem === niforward
+                source: tabview.currentTab().favorite ? "image://theme/icon-m-favorite-selected" : "image://theme/icon-m-favorite"
+                onClicked: {
+                                  favorites();
+                                  tabview.favorite=!tabview.favorite;
+                               }
+            }
+
             ActionButton
             {
                 id: btncustomaction
@@ -441,15 +514,22 @@ Rectangle
                 id: btntabs
                 width: navigationbar.contentHeight
                 height: parent.height
+                enabled: visible
                 anchors.verticalCenter: parent.verticalCenter
 
                 visible: {
+                  if(settings.gui==="phone"){
                     var tab = currentTab();
 
                     if(!tab || !tab.viewStack.empty)
                         return false;
 
                     return true;
+                  }
+                  else if (settings.gui==="tabletlandscape"){
+                    if(isPortrait){return true;}
+                  }
+                  return false;
                 }
 
                 source: {

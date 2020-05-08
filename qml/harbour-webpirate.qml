@@ -48,6 +48,9 @@ ApplicationWindow
                 settings.coveractions.webPageLeftAction = c.left;
                 settings.coveractions.webPageRightAction = c.right;
 
+                var gui = Database.transactionGet(tx, "gui");
+                settings.gui = (gui === false ? "phone" : gui);
+
                 var hp = Database.transactionGet(tx, "homepage");
                 settings.homepage = (hp === false ? "about:newtab" : hp);
 
@@ -59,6 +62,13 @@ ApplicationWindow
 
                 var ua = Database.transactionGet(tx, "useragent");
                 settings.useragent = (ua === false ? 0 : ua);
+
+
+                var guifp = Database.transactionGet(tx, "guifactorportrait");
+                settings.guifactorportrait = (guifp === false ? 1.0 : guifp);
+
+                var guifl = Database.transactionGet(tx, "guifactorlandscape");
+                settings.guifactorlandscape = (guifl === false ? 1.0 : guifl);
 
                 settings.adblockmanager.enabled = parseInt(Database.transactionGet(tx, "blockads"));
                 settings.tabminen = parseInt(Database.transactionGet(tx, "tabminen"));
@@ -85,6 +95,11 @@ ApplicationWindow
     initialPage: Component { MainPage { } }
     cover: null
     property bool busy: true
+    property bool finishAnim: false
+
+    onBusyChanged: {
+        finishAnim=true;
+    }
 
     Component.onDestruction: {
         Database.set("blockads", settings.adblockmanager.enabled ? 1 : 0);

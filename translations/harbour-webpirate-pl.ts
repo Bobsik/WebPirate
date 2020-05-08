@@ -712,6 +712,38 @@
         <source>Integrate to MIME</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Main UI</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Phone UI</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tablet UI</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>General settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tablet UI Landscape only</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Landscape</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Portrait</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;font size=&quot;1&quot;&gt; Main Browser GUI Size Factor in % (80 - 200)&lt;/font&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>GrabberItem</name>
@@ -1032,6 +1064,22 @@
         <source>Port</source>
         <translation>Port</translation>
     </message>
+    <message>
+        <source>Use Socks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Socket Secure (SOCKS) is an Internet protocol that exchanges network packets between a client and server through a proxy server.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use Tor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tor is free software for enabling anonymous communication. This will setup the proxy automatically to use tor. Tor service must be running on the system for this to work.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>QueryBar</name>
@@ -1072,6 +1120,17 @@
     <message>
         <source>Done</source>
         <translation>Gotowe</translation>
+    </message>
+</context>
+<context>
+    <name>QuickGridFavorites</name>
+    <message>
+        <source>Settings</source>
+        <translation type="unfinished">Ustawienia</translation>
+    </message>
+    <message>
+        <source>New tab</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1344,6 +1403,25 @@
     <message>
         <source>Media Player</source>
         <translation>Odtwarzacz Mediów</translation>
+    </message>
+</context>
+<context>
+    <name>TabListItemSmall</name>
+    <message>
+        <source>Quick Grid</source>
+        <translation type="unfinished">Szybkie Wybieranie</translation>
+    </message>
+    <message>
+        <source>Load error</source>
+        <translation type="unfinished">Błąd ładowania</translation>
+    </message>
+    <message>
+        <source>Grabber</source>
+        <translation type="unfinished">Zgrywanie wideo zakończone pomyślnie</translation>
+    </message>
+    <message>
+        <source>Media Player</source>
+        <translation type="unfinished">Odtwarzacz Mediów</translation>
     </message>
 </context>
 <context>

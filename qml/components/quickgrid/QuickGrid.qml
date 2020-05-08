@@ -126,7 +126,6 @@ Item
 
         }
     }
-
     QuickGridBottomPanel
     {
         id: quickgridbottompanel

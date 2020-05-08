@@ -126,7 +126,7 @@ SilicaListView
 
         QtObject { readonly property string menuText: qsTr("Open Image")
           function execute() {
-            var tab = tabs.get(currentIndex).tab;
+            var tab = tabview.currentTab()
             tab.load(linkmenu.src);
          }
         },

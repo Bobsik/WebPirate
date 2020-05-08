@@ -2,7 +2,7 @@
 
 var browsemenus = [ {"type": "Pull Down Menu",     "value": "pulldown" },
                     {"type": "Push Up Menu",    "value": "pushup" },
-                    {"type": "MiniMenu",    "value": "minimenu" },
+                    {"type": "MiniMenu (Phone UI only)",    "value": "minimenu" },
 ]
 function load(tx)
 {
